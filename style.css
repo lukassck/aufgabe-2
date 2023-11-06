@@ -1,0 +1,301 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black 33%,
+    red 33%,
+    red 66%,
+    gold 66%,
+    gold 100%
+  );
+
+  min-height: 100%;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 12pt;
+
+  flex-grow: 1;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.line {
+  padding: 0;
+  border: 0px solid lightgrey;
+  border-bottom-width: 1px;
+}
+
+.max-width {
+  max-width: 75vw;
+  margin: 0 auto;
+}
+
+/**
+ * Kopfbereich
+ */
+header > * {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+header nav div.nr1 {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  display: inline;
+  padding-left: 1em;
+  font-weight: bold;
+}
+
+#searchbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#searchbar input {
+  border: 0px solid transparent;
+  background-color: #f0f0f0;
+  padding: 1em;
+
+  flex-grow: 1;
+}
+
+#searchbar button {
+  border: 0px solid transparent;
+  background: none;
+
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+  font-weight: bold;
+}
+
+#searchbar button.black {
+  background: black;
+  color: white;
+  margin-right: 2em;
+}
+
+#searchbar button.white {
+  background: white;
+  color: black;
+  border: 1px solid lightgrey;
+}
+
+#searchbar button.transparent {
+  padding-right: 0;
+}
+
+/**
+ * Hauptbereich
+ */
+main {
+  flex-grow: 1;
+}
+
+main > section {
+  display: flex;
+  justify-content: center;
+}
+
+main > section.jumbotron {
+  background-image: url(jumbotron-hintergrund.png);
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  text-align: center;
+
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+
+main > section.jumbotron > div {
+  max-width: 35em;
+}
+
+main > section.jumbotron h1 {
+  font-size: 400%;
+}
+
+main > section.narrow > div {
+  font-weight: bold;
+  font-size: 180%;
+
+  max-width: 15em;
+  text-align: center;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/**
+ * Fußbereich
+ */
+footer {
+  background-color: #f0f0f0;
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.25);
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 2em;
+}
+
+footer #phone,
+#mail {
+  font-size: 25px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: -0.3em;
+  margin-bottom: -0.75em;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; /* Fügt einen Abstand zwischen dem Icon und dem Text hinzu */
+}
+
+.social-icon > img {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.large {
+  font-size: 28px;
+}
+
+.payment {
+  margin-top: 0.5em; /* Verkleinert den Abstand über dem Text */
+  margin-bottom: 2em; /* Erhöht den Abstand unterhalb des Textes und der Zahlungsmethoden */
+}
+
+.payment-methods {
+  margin-top: 4em; /* Erhöht den Abstand oberhalb der Zahlungsmethoden */
+}
+
+section.payment-methods img {
+  max-width: 150px;
+  margin-top: -3em;
+  margin-bottom: 3em;
+}
+
+@media print {
+  nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .side-by-side {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.search-result {
+  display: contents;
+  font-weight: bold;
+  font-size: 180%;
+  padding: 10em;
+  max-width: 15em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Cookie-Meldung */
+
+.cookie-consent {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(105, 102, 102, 0.9);
+color: #fff;
+padding: 10px;
+text-align: center;
+display: flex; /* Flexbox für die Zentrierung */
+justify-content: center; /* Horizontal zentrieren */
+align-items: center; /* Vertikal zentrieren */
+}
+
+.cookie-consent a {
+color: lightblue;
+text-decoration: underline;
+}
+
+#accept-cookie {
+background-color: green;
+color: #fff;
+border: none;
+padding: 8px;
+margin-right: 5px;
+cursor: pointer;
+border-radius: 5px; /* abgerundete Ecken */
+}

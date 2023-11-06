@@ -1,0 +1,14 @@
+TO DO:
+- dummyjson einbinden
+- CSS strukturieren und unnötige Parts entfernen
+- zwei CSS-Files je HTML-Seite für mobile und Desktop und entsprechend Abstände anpassen und @media 
+    anpassen (siehe LZ-Media Query)
+- Navigation
+- Suche
+- Detailpage
+
+TO FIX:
+
+
+
+border-radius = 0.5em (für abgerundete Ecken)
